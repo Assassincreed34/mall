@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Furniture Mall - Transform Your Space</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-couch"></i>
+                    <h1>Premium Furniture Mall</h1>
+                </div>
+                <nav class="nav">
+                    <div class="nav-controls">
+                        <div class="admin-toggle">
+                            <button class="btn btn--outline btn--sm" id="adminToggle">
+                                <i class="fas fa-user-shield"></i> Admin
+                            </button>
+                        </div>
+                        <div class="cart-icon" id="cartToggle">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Status Bar -->
+    <div class="admin-status hidden" id="adminStatus">
+        <div class="container">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Admin Mode Active</span>
+                </div>
+                <button class="btn btn--sm btn--outline" id="adminLogout">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Transform Your Space with Premium Quality Furniture</h2>
+                <p>Discover our exclusive collection of premium furniture pieces designed to elevate your living spaces.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>500+</strong>
+                        <span>Premium Products</span>
+                    </div>
+                    <div class="stat">
+                        <strong>10,000+</strong>
+                        <span>Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <strong>5★</strong>
+                        <span>Customer Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filters -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-content">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search furniture..." id="searchInput">
+                </div>
+                <div class="category-filter">
+                    <select id="categoryFilter" class="form-control">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section class="categories-section">
+        <div class="container">
+            <h3>Shop by Category</h3>
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h3>Our Premium Collection</h3>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Call Us</strong>
+                            <span>+91-9591936066</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email Us</strong>
+                            <span>contact@premiumfurnituremall.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Visit Us</strong>
+                            <span>Karnataka, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="business-hours">
+                    <h4>Business Hours</h4>
+                    <div class="hours-item">
+                        <span>Monday - Friday</span>
+                        <span>9:00 AM - 8:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Saturday</span>
+                        <span>9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <span>Sunday</span>
+                        <span>10:00 AM - 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-couch"></i>
+                        <h4>Premium Furniture Mall</h4>
+                    </div>
+                    <p>Transform Your Space with Premium Quality Furniture</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Premium Furniture Mall. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar hidden" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+            <div class="cart-empty hidden" id="cartEmpty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cartTotal">0</span></strong>
+            </div>
+            <button class="btn btn--primary btn--full-width" id="checkoutBtn">
+                <i class="fab fa-whatsapp"></i>
+                Order via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Admin Password Modal -->
+    <div class="modal hidden" id="adminModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admin Authentication</h3>
+                <button class="modal-close" id="adminModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Enter Admin Password</label>
+                    <input type="password" class="form-control" id="adminPassword" placeholder="Enter password">
+                    <div class="error-message hidden" id="passwordError">Incorrect password. Please try again.</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="adminCancel">Cancel</button>
+                <button class="btn btn--primary" id="adminLogin">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Price Edit Modal -->
+    <div class="modal hidden" id="priceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Product Price</h3>
+                <button class="modal-close" id="priceModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-edit-info">
+                    <h4 id="editProductName"></h4>
+                    <p id="editProductDescription"></p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Current Price: ₹<span id="currentPrice"></span></label>
+                    <input type="number" class="form-control" id="newPrice" placeholder="Enter new price">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="priceCancel">Cancel</button>
+                <button class="btn btn--primary" id="priceSave">Save Price</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay hidden" id="cartOverlay"></div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay hidden" id="modalOverlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
